@@ -1,5 +1,5 @@
 import { expect, vi } from "vitest";
-import { render } from "../../tests/renders";
+import { render, renderWithProviders } from "../../tests/renders";
 import { MasterPasswordInput } from "./masterPasswordInput";
 import { useForm } from "react-hook-form";
 
@@ -55,5 +55,51 @@ describe("Master password", () => {
         (iconName) => queryByTestId(iconName) !== null,
       ).length,
     ).toBe(3);
+  });
+
+  // check that it does not introduce a breaking change
+  test("short master password does not block the form", async () => {
+    const { user, queryByTestId } = render(<ManagedMasterPasswordInput />);
+    const masterPasswordInput = queryByTestId("password") as HTMLInputElement;
+
+    await user.type(masterPasswordInput, "short");
+    expect(masterPasswordInput).not.toHaveAttribute("minlength");
+    expect(masterPasswordInput.checkValidity()).toBe(true);
+  });
+
+  test("should not display a safe color while under the minimum length", async () => {
+    const { user, queryByTestId } = render(<ManagedMasterPasswordInput />);
+    const masterPasswordInput = queryByTestId("password") as HTMLInputElement;
+
+    await user.type(masterPasswordInput, "Tr0ub4d&3");
+    const output = document.querySelector("output");
+    expect(output?.className).toContain("text-amber-600");
+    expect(output?.className).not.toContain("text-green-500");
+  });
+
+  test("should display password strength feedback when typing", async () => {
+    const { user, queryByTestId } = render(<ManagedMasterPasswordInput />);
+    const masterPasswordInput = queryByTestId("password") as HTMLInputElement;
+
+    // no feedback before typing
+    expect(document.querySelector("output")).toBeNull();
+
+    // feedback appears after typing
+    await user.type(masterPasswordInput, "password");
+    expect(document.querySelector("output")).not.toBeNull();
+  });
+
+  test("should not display a warning before typing", async () => {
+    render(<ManagedMasterPasswordInput />);
+    expect(document.querySelector("output")).toBeNull();
+  });
+
+  test("should display the translated too-short warning", async () => {
+    const { user, queryByTestId } = renderWithProviders(<ManagedMasterPasswordInput />);
+    const masterPasswordInput = queryByTestId("password") as HTMLInputElement;
+
+    await user.type(masterPasswordInput, "a");
+    const output = document.querySelector("output");
+    expect(output?.textContent?.trim()).toBe("We recommend you use at least 10 characters");
   });
 });
