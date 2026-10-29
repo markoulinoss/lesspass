@@ -71,6 +71,7 @@
     "Length": "Długość",
     "Login": "Login",
     "MasterPassword": "Hasło główne",
+    "MasterPasswordTooShort": "",
     "Options": "Opcje",
     "PasswordProfileCopiedInClipboard": "URL profilu hasła został skopiowany do schowka.",
     "PasswordProfileSaved": "Profil hasła zapisany",

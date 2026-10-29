@@ -71,6 +71,7 @@
     "Length": "長度",
     "Login": "登入名稱",
     "MasterPassword": "主密碼",
+    "MasterPasswordTooShort": "",
     "Options": "選項",
     "PasswordProfileCopiedInClipboard": "密碼設定檔的 URL 已複製到剪貼簿。",
     "PasswordProfileSaved": "密碼設定檔已儲存",

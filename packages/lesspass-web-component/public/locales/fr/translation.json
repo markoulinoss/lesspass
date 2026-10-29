@@ -71,6 +71,7 @@
     "Length": "Longueur",
     "Login": "Nom d'utilisateur",
     "MasterPassword": "Mot de passe maître",
+    "MasterPasswordTooShort": "",
     "Options": "Options",
     "PasswordProfileCopiedInClipboard": "L'URL du mot de passe a été copié dans le presse papier",
     "PasswordProfileSaved": "Profil de mot de passe enregistré",

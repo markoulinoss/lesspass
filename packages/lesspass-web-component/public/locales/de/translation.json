@@ -71,6 +71,7 @@
     "Length": "Länge",
     "Login": "Benutzername",
     "MasterPassword": "Master-Passwort",
+    "MasterPasswordTooShort": "",
     "Options": "Optionen",
     "PasswordProfileCopiedInClipboard": "Die URL des Passwortprofils wurde in die Zwischenablage kopiert.",
     "PasswordProfileSaved": "Passwort-Profil gespeichert",

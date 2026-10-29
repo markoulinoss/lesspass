@@ -71,6 +71,7 @@
     "Length": "Comprimento",
     "Login": "Nome de utilizador",
     "MasterPassword": "Palavra-passe mestre",
+    "MasterPasswordTooShort": "",
     "Options": "Opções",
     "PasswordProfileCopiedInClipboard": "A URL do perfil da senha foi copiada para a área de transferência.",
     "PasswordProfileSaved": "Perfil de palavra-passe guardado",

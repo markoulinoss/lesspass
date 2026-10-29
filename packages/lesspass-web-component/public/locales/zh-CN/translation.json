@@ -71,6 +71,7 @@
     "Length": "长度",
     "Login": "登录名",
     "MasterPassword": "主密码",
+    "MasterPasswordTooShort": "",
     "Options": "选项",
     "PasswordProfileCopiedInClipboard": "密码配置文件的 URL 已复制到剪贴板。",
     "PasswordProfileSaved": "密码配置文件已保存",

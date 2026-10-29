@@ -71,6 +71,7 @@
     "Length": "Длина",
     "Login": "Логин",
     "MasterPassword": "Мастер-пароль",
+    "MasterPasswordTooShort": "",
     "Options": "Опции",
     "PasswordProfileCopiedInClipboard": "URL профиля пароля скопирован в буфер обмена.",
     "PasswordProfileSaved": "Профиль пароля сохранен",

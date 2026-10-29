@@ -71,6 +71,7 @@
     "Length": "Longitud",
     "Login": "Usuari",
     "MasterPassword": "Contrasenya mestra",
+    "MasterPasswordTooShort": "",
     "Options": "Opcions",
     "PasswordProfileCopiedInClipboard": "L'URL del perfil de la contrasenya s'ha copiat al porta-retalls.",
     "PasswordProfileSaved": "Perfil de contrasenya desat",

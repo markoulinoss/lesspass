@@ -71,6 +71,7 @@
     "Length": "Lunghezza",
     "Login": "Login",
     "MasterPassword": "Password principale",
+    "MasterPasswordTooShort": "",
     "Options": "Opzioni",
     "PasswordProfileCopiedInClipboard": "L'URL del profilo della password è stato copiato negli appunti",
     "PasswordProfileSaved": "Profilo password salvato",
